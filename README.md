@@ -1,18 +1,31 @@
-youtube-drfsite-1 (API)
+<h1>youtube-drfsite-1 (API)</h1>
 
 порядок установки (в venv):
-pip install Django
-pip install djangorestframework
-pip install pytube
-pip install git+https://github.com/openai/whisper.git
-pip install langdetect
+<ul>
+  <li>pip install Django</li>
+  <li>pip install djangorestframework</li>
+  <li>pip install pytube</li>
+  <li>pip install git+https://github.com/openai/whisper.git</li>
+  <li>pip install langdetect</li>
+</ul>
 
-также необходимо установить ffmpeg. гайд по установке: https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/
+
+<p>также необходимо установить ffmpeg. 
+гайд по установке: </p>
+<ul>
+  <li>https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/</li>
+</ul>
 
 краткое пояснение концепта API:
-с фронтенда посылается POST запрос такого типа: {"link": "(ссылка)"}. на стороне API ищется видео с такой ссылкой и его аудио преобразуется в текст. в зависимости от успеха операции выводится JsonResponse.
-в каждом JsonResponse есть параметр message с сообщением об успехе или провале операции и в случае полного успеха выводится также и параметр text с текстом, полученным из аудио
+<ul>
+  <li>с фронтенда посылается POST запрос такого типа: {"link": "(ссылка)"}.</li>
+  <li>на стороне API ищется видео с такой ссылкой и его аудио преобразуется в текст. </li>
+  <li>в зависимости от успеха операции выводится JsonResponse.</li>
+  <li>в каждом JsonResponse есть параметр message с сообщением об успехе или провале операции и в случае полного успеха выводится также и параметр text с текстом, полученным из аудио</li>
+</ul>
+ 
 
-вся API работает достаточно медленно, но можно в теории ускорить при помощи асинхронки, но это пока что не ко мне Xd
+
+<p>вся API работает достаточно медленно, но можно в теории ускорить при помощи асинхронки, но это пока что не ко мне Xd</p>
 
 
